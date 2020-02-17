@@ -6,15 +6,24 @@ import { PrismicLink } from './prismic-elements';
  * Homepage banner component
  */
 const HomepageBanner = ({ banner }) => (
-  <section
-    className="homepage-banner"style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(${banner.image.url})` }}
-    
-  >
-    <div className="banner-content container">
-      <h2 className="banner-title">
+  <div className="relative pt-16 pb-32 flex content-center items-center justify-center"
+    style={{
+  minHeight: "75vh"
+}}>
+  <div className="absolute top-0 w-full h-full bg-center bg-cover"
+  style={{
+    backgroundImage:`url(${banner.image.url})` }}
+    >
+    <span id="blackOverlay" className="w-full h-full absolute opacity-75 bg-black"></span>
+</div>
+<div className="container relative mx-auto">
+  <div className="items-center flex flex-wrap">
+    <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+      <div className="pr-12">
+        <h1 className="text-white font-semibold text-5xl">
         {RichText.asText(banner.title)}
-      </h2>
-      <p className="banner-description">
+      </h1>
+      <p className="mt-4 text-lg text-gray-300">
         {RichText.asText(banner.tagline)}
       </p>
       <PrismicLink
@@ -24,7 +33,11 @@ const HomepageBanner = ({ banner }) => (
         {RichText.asText(banner.button_label)}
       </PrismicLink>
     </div>
-  </section>
+    </div>
+
+  </div>
+  </div>
+  </div>
 );
 
 export default HomepageBanner;
