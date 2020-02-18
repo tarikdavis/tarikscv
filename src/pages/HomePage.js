@@ -43,7 +43,9 @@ const HomePage = () => {
         menuDoc={menuDoc}
       >
         <HomepageBanner banner={homeDoc.data.homepage_banner[0]} />
+        <div className="bg-gray-400">
         <SliceZone sliceZone={homeDoc.data.page_content} />
+        </div>
       </DefaultLayout>
     );
   } else if (notFound) {
