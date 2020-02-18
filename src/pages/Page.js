@@ -47,7 +47,9 @@ const Page = ({ match }) => {
         menuDoc={menuDoc}
       >
         <PageBanner banner={pageDoc.data.page_banner[0]} />
+        <div className="container mx-auto">
         <SliceZone sliceZone={pageDoc.data.page_content} />
+        </div>
       </DefaultLayout>
     );
   } else if (notFound) {

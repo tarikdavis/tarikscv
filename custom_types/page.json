@@ -263,7 +263,7 @@
               "icon_card_description": {
                 "type": "StructuredText",
                 "config": {
-                  "multi": "paragraph, preformatted, strong, em, hyperlink",
+                  "multi": "paragraph, preformatted, strong, em, hyperlink, list-item",
                   "label": "Icon card description"
                 }
               },
