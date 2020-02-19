@@ -6,32 +6,36 @@ import { PrismicLink, RichTextField } from '../prismic-elements';
  * Icon card slice component
  */
 const IconCard = ({ slice }) => (
+<div class="container mx-auto px-4 py-4">
 <section>
-<div class="container mx-auto max-w-5xl m-8 bg-gray-100 rounded">
-<div class="flex flex-wrap flex-col-reverse sm:flex-row">
 
-<div className="sm:invisible md:visible lg:visible xl:visible h-48 lg:h-auto lg:w-48 flex-none text-center overflow-hidden">
+<div className="flex max-w-full rounded overflow-hidden shadow-lg bg-white">
+
+<div className="flex-initial px-6 py-6">
 <img
         src={slice.primary.icon_card_image.url}
         alt={slice.primary.icon_card_image.alt}
       />
 </div>
-<div class="w-full p-6 mt-6">
-<div class="align-middle">
-<h3 class="text-2xl text-gray-800 font-bold leading-none mb-3"><RichTextField field={slice.primary.icon_card_title} /></h3>
-<p class="text-gray-600 mb-4">
+<div className="flex-initial px-6 py-4">
+    <div className="font-bold text-l md:text-xl lg:text-2xl mb-2">
+      <RichTextField field={slice.primary.icon_card_title} />
+      </div>
+
+  <p className="text-gray-700 text-base">
 <RichTextField field={slice.primary.icon_card_description} />
 </p>
-<p>
+</div>
+<div className="px-6 py-4">
         <PrismicLink link={slice.primary.icon_card_button}>
           {RichText.asText(slice.primary.icon_card_button_label)}
         </PrismicLink>
-      </p>
 </div>
 </div>
-</div>
-</div>
+
 </section>
+</div>
 );
 
 export default IconCard;
+

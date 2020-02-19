@@ -6,10 +6,7 @@ import { PrismicLink } from './prismic-elements';
  * Page banner component
  */
 const PageBanner = ({ banner }) => (
-<div className="relative pt-16 pb-32 flex content-center items-center justify-center"
-    style={{
-  minHeight: "75vh"
-}}>
+<div className="relative pt-16 pb-32 flex content-center items-center justify-center" style={{ minHeight: "75vh"}} >
   <div className="absolute top-0 w-full h-full bg-center bg-cover"
   style={{
     backgroundImage:`url(${banner.image.url})` }}
