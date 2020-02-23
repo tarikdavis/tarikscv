@@ -1,14 +1,7 @@
 [![Dependency Status](https://david-dm.org/raulg/reactjs-website.svg)](https://david-dm.org/raulg/reactjs-website)
 
-# Prismic React Site Example
-This project is an implementation of the Prismic multipage site demo using ReactJS. Built up from the starter project, it's meant to provide you with an idea of how to build your own sites using the Prismic features. Read our [user guide](https://intercom.help/prismicio/en/articles/2731304-sample-multi-page-site-with-navigation-in-reactjs) if you need guidance on how to use this repository.
-
-## Getting started quickly with Prismic Themes
-You can use our [Prismic-CLI](https://github.com/prismicio/prismic-cli) tool to quickly install this project in your machine, as well as setting up a Prismic repository with the required Custom Types. Just follow the instructions in your terminal to get started!
-
-```
-npm install -g prismic-cli
-prismic theme https://github.com/raulg/reactjs-website --conf /src/prismic-configuration.js
+# Portfolio website built using React and Prismic.
+I've used the Prismic starter which I've adapted, I've also added new React components and Prismic slices
 ```
 
 ### Install dependencies
